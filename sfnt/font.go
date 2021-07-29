@@ -129,6 +129,14 @@ func (font *Font) NameTable() (*TableName, error) {
 	return t.(*TableName), nil
 }
 
+func (font *Font) FvarTable() (*TableFvar, error) {
+	t, err := font.Table(TagFvar)
+	if err != nil {
+		return nil, err
+	}
+	return t.(*TableFvar), nil
+}
+
 func (font *Font) HheaTable() (*TableHhea, error) {
 	t, err := font.Table(TagHhea)
 	if err != nil {
