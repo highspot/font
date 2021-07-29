@@ -12,6 +12,7 @@ var parsers = map[Tag]tableParser{
 	TagOS2:  parseTableOS2,
 	TagGpos: parseTableLayout,
 	TagGsub: parseTableLayout,
+	TagFvar: parseTableFvar,
 }
 
 // Table is an interface for each section of the font file.

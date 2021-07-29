@@ -14,7 +14,7 @@ var (
 	TagMaxp = MustNamedTag("maxp")
 	// TagHmtx represents the 'hmtx' table, which contains the horizontal metrics
 	TagHmtx = MustNamedTag("hmtx")
-	// TagHhea represents the 'hhea' table, which contains the horizonal header
+	// TagHhea represents the 'hhea' table, which contains the horizontal header
 	TagHhea = MustNamedTag("hhea")
 	// TagOS2 represents the 'OS/2' table, which contains windows-specific metadata
 	TagOS2 = MustNamedTag("OS/2")
@@ -24,6 +24,8 @@ var (
 	TagGpos = MustNamedTag("GPOS")
 	// TagGsub represents the 'GSUB' table, which contains Glyph Substitution features
 	TagGsub = MustNamedTag("GSUB")
+	// TagGsub represents the 'fvar' table, which contains Variation Axis
+	TagFvar = MustNamedTag("fvar")
 
 	// TypeTrueType is the first four bytes of an OpenType file containing a TrueType font
 	TypeTrueType = Tag{0x00010000}
