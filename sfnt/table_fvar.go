@@ -117,12 +117,7 @@ func parseTableFvar(tag Tag, buf []byte) (Table, error) {
 				instance.PsNameID,
 			})
 		}
-
 	}
 
-	//var fields fvarTableFields
-	//if err := binary.Read(r, binary.BigEndian, &fields); err != nil {
-	//	return nil, err
-	//}
 	return table, nil
 }
