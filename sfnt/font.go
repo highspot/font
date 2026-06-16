@@ -167,6 +167,66 @@ func (font *Font) GsubTable() (*TableLayout, error) {
 	return font.TableLayout(TagGsub)
 }
 
+// FvarTable returns the font variations table identified with the 'fvar' tag.
+func (font *Font) FvarTable() (*TableFvar, error) {
+	t, err := font.Table(TagFvar)
+	if err != nil {
+		return nil, err
+	}
+	return t.(*TableFvar), nil
+}
+
+// AvarTable returns the axis variations table identified with the 'avar' tag.
+func (font *Font) AvarTable() (*TableAvar, error) {
+	t, err := font.Table(TagAvar)
+	if err != nil {
+		return nil, err
+	}
+	return t.(*TableAvar), nil
+}
+
+// GvarTable returns the glyph variations table identified with the 'gvar' tag.
+func (font *Font) GvarTable() (*TableGvar, error) {
+	t, err := font.Table(TagGvar)
+	if err != nil {
+		return nil, err
+	}
+	return t.(*TableGvar), nil
+}
+
+// StatTable returns the style attributes table identified with the 'STAT' tag.
+func (font *Font) StatTable() (*TableStat, error) {
+	t, err := font.Table(TagStat)
+	if err != nil {
+		return nil, err
+	}
+	return t.(*TableStat), nil
+}
+
+// HvarTable returns the horizontal metrics variations table identified with the 'HVAR' tag.
+func (font *Font) HvarTable() (*TableHvar, error) {
+	t, err := font.Table(TagHvar)
+	if err != nil {
+		return nil, err
+	}
+	return t.(*TableHvar), nil
+}
+
+// MvarTable returns the metrics variations table identified with the 'MVAR' tag.
+func (font *Font) MvarTable() (*TableMvar, error) {
+	t, err := font.Table(TagMvar)
+	if err != nil {
+		return nil, err
+	}
+	return t.(*TableMvar), nil
+}
+
+// IsVariable returns true if this font contains an 'fvar' table,
+// indicating it is a variable font.
+func (font *Font) IsVariable() bool {
+	return font.HasTable(TagFvar)
+}
+
 func (font *Font) Table(tag Tag) (Table, error) {
 	s, found := font.tables[tag]
 	if !found {
