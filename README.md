@@ -1,6 +1,7 @@
 font
 ====
 
+[![Build Status](https://travis-ci.org/ConradIrwin/font.svg?branch=master)](https://travis-ci.org/ConradIrwin/font) [![GoDoc](https://godoc.org/github.com/ConradIrwin/font?status.svg)](https://godoc.org/github.com/ConradIrwin/font)
 
 A collection of Go packages for parsing and encoding OpenType fonts.
 
