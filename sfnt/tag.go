@@ -25,6 +25,22 @@ var (
 	// TagGsub represents the 'GSUB' table, which contains Glyph Substitution features
 	TagGsub = MustNamedTag("GSUB")
 
+	// TagFvar represents the 'fvar' table, which contains font variation axis definitions
+	TagFvar = MustNamedTag("fvar")
+	// TagAvar represents the 'avar' table, which contains axis variation remapping
+	TagAvar = MustNamedTag("avar")
+	// TagGvar represents the 'gvar' table, which contains glyph variation data
+	TagGvar = MustNamedTag("gvar")
+	// TagStat represents the 'STAT' table, which contains style attributes
+	TagStat = MustNamedTag("STAT")
+	// TagHvar represents the 'HVAR' table, which contains horizontal metrics variations
+	TagHvar = MustNamedTag("HVAR")
+	// TagMvar represents the 'MVAR' table, which contains metrics variations
+	TagMvar = MustNamedTag("MVAR")
+
+	// TagWdth is the OpenType variation axis tag for font width.
+	TagWdth = MustNamedTag("wdth")
+
 	// TypeTrueType is the first four bytes of an OpenType file containing a TrueType font
 	TypeTrueType = Tag{0x00010000}
 	// TypeAppleTrueType is the first four bytes of an OpenType file containing a TrueType font
